@@ -1,409 +1,1478 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
 
-  <!-- Materialize - Compiled and minified CSS -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <title>Moesha Woods | Machine Learning & Data Science</title>
 
-  <!-- Font Awesome Icon - CSS -->
-  <link rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <meta name="author" content="Moesha Woods">
+  <meta name="description" content="Moesha Woods is a computer science professional with experience in software engineering, data analysis, research, machine learning, and data science.">
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <title>Moesha Woods | Machine Learning &amp; Data Science</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- Open Graph -->
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title"
-    content="Moesha Woods | Machine Learning &amp; Data Science" />
-  <meta property="og:description"
-    content="Computer Science professional with experience in software engineering, data analysis, and research." />
-  <meta property="og:site_name" content="Moesha Woods | Portfolio" />
+  <style>
+    :root {
+      --bg: #f5f2eb;
+      --surface: #fffefa;
+      --surface-alt: #ebe6da;
+      --text: #302f29;
+      --muted: #66645a;
+      --primary: #59664a;
+      --primary-dark: #3f4b35;
+      --accent: #a87952;
+      --border: #ddd6c8;
+      --shadow: 0 8px 28px rgba(57, 51, 39, 0.07);
+      --radius: 14px;
+      --nav-width: 245px;
+      --content-width: 950px;
+    }
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title"
-    content="Moesha Woods | Machine Learning &amp; Data Science" />
-  <meta name="twitter:description"
-    content="Computer Science professional focused on machine learning, data science, and research." />
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-  <!-- Author and SEO -->
-  <meta name="author" content="Moesha Woods" />
-  <meta name="description"
-    content="Moesha Woods is a Computer Science professional with a background in software engineering, data analysis, and research, interested in machine learning and data science." />
-  <meta name="robots" content="index, follow" />
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
 
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="57x57"
-    href="/assets/img/favicon/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60"
-    href="/assets/img/favicon/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72"
-    href="/assets/img/favicon/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76"
-    href="/assets/img/favicon/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114"
-    href="/assets/img/favicon/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120"
-    href="/assets/img/favicon/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144"
-    href="/assets/img/favicon/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152"
-    href="/assets/img/favicon/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180"
-    href="/assets/img/favicon/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192"
-    href="/assets/img/favicon/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32"
-    href="/assets/img/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96"
-    href="/assets/img/favicon/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16"
-    href="/assets/img/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="/assets/img/favicon/manifest.json" />
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: "DM Sans", sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+    }
 
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage"
-    content="/assets/img/favicon/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#ffffff" />
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: var(--primary-dark);
+      text-underline-offset: 4px;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--text);
+      line-height: 1.3;
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      padding-left: 3px;
+      margin-bottom: 7px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 12px;
+      z-index: 2000;
+      background: var(--surface);
+      color: var(--text);
+      padding: 12px 18px;
+      border-radius: 8px;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    /* Desktop sidebar */
+
+    .sidebar {
+      position: fixed;
+      inset: 0 auto 0 0;
+      z-index: 100;
+      width: var(--nav-width);
+      padding: 35px 22px;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 46px;
+      height: 46px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .brand-name {
+      display: block;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .brand-subtitle {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .nav-label {
+      padding-left: 12px;
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links li {
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a .fa {
+      width: 17px;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: var(--surface-alt);
+      color: var(--primary-dark);
+    }
+
+    .sidebar-bottom {
+      margin-top: auto;
+      padding-top: 30px;
+    }
+
+    .sidebar-resume {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      width: 100%;
+      padding: 12px 15px;
+      background: var(--primary);
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .sidebar-resume:hover {
+      color: white;
+      background: var(--primary-dark);
+    }
+
+    .sidebar-note {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+      margin: 15px 0 0;
+    }
+
+    /* Mobile navigation */
+
+    .mobile-header {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    /* Main content */
+
+    main {
+      margin-left: var(--nav-width);
+      min-width: 0;
+    }
+
+    .container {
+      width: min(100% - 64px, var(--content-width));
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 66px 0;
+      scroll-margin-top: 78px;
+    }
+
+    .section-heading {
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: clamp(29px, 3vw, 39px);
+      margin-bottom: 12px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      max-width: 660px;
+      margin-bottom: 0;
+    }
+
+    .content-card {
+      min-width: 0;
+      padding: 27px 30px;
+      margin-bottom: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .content-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-card h3,
+    .content-card h4 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .content-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .role {
+      color: var(--primary-dark);
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0;
+    }
+
+    .tag-list li {
+      margin: 0;
+      padding: 5px 11px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      border-radius: 6px;
+      color: var(--primary-dark);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* Hero */
+
+    .hero {
+      min-height: 91vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 0;
+      background:
+        radial-gradient(ellipse at 85% 15%, rgba(168, 121, 82, 0.12), transparent 40%),
+        linear-gradient(135deg, #f5f2eb, #eeeadf);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-content {
+      max-width: 790px;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 22px;
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .hero-kicker::before {
+      content: "";
+      display: inline-block;
+      width: 26px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      letter-spacing: -1.7px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero-role {
+      max-width: 700px;
+      color: var(--primary-dark);
+      font-size: clamp(18px, 2vw, 23px);
+      font-weight: 600;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 47px;
+      padding: 12px 20px;
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+      color: white;
+    }
+
+    .button-secondary {
+      background: transparent;
+      color: var(--primary-dark);
+      border-color: var(--border);
+    }
+
+    .button-secondary:hover {
+      background: var(--surface);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+
+    /* About */
+
+    .about-copy p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .about-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Experience */
+
+    .timeline {
+      border-left: 2px solid var(--border);
+      padding-left: 24px;
+      margin-left: 5px;
+    }
+
+    .timeline .content-card {
+      position: relative;
+    }
+
+    .timeline .content-card::before {
+      content: "";
+      position: absolute;
+      left: -33px;
+      top: 31px;
+      width: 12px;
+      height: 12px;
+      background: var(--primary);
+      border: 3px solid var(--bg);
+      border-radius: 50%;
+      box-sizing: content-box;
+    }
+
+    /* Projects */
+
+    .project-title {
+      color: var(--primary-dark);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-grid .content-card {
+      margin: 0;
+    }
+
+    .project-grid .content-card h3 {
+      font-size: 21px;
+    }
+
+    /* Skills */
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .skill-grid .content-card {
+      margin: 0;
+    }
+
+    .skill-grid h3 {
+      font-size: 20px;
+    }
+
+    /* Education and credentials */
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .education-grid .content-card {
+      margin: 0;
+    }
+
+    /* Contact */
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 15px 0;
+      margin: 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .contact-icon {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 39px;
+      height: 39px;
+      background: var(--surface-alt);
+      color: var(--primary-dark);
+      border-radius: 9px;
+    }
+
+    .contact-label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .contact-list a {
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      padding: 28px 24px;
+      margin-left: var(--nav-width);
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Tablet */
+
+    @media (max-width: 1050px) {
+      :root {
+        --nav-width: 215px;
+      }
+
+      .sidebar {
+        padding: 28px 15px;
+      }
+
+      .container {
+        width: calc(100% - 44px);
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .content-card {
+        padding: 23px;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 760px) {
+      html {
+        scroll-padding-top: 75px;
+      }
+
+      body {
+        font-size: 15px;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .mobile-header {
+        position: sticky;
+        top: 0;
+        z-index: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 66px;
+        padding: 10px 20px;
+        background: rgba(255, 254, 250, 0.97);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(10px);
+      }
+
+      .mobile-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 15px;
+      }
+
+      .mobile-brand .brand-mark {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        width: 43px;
+        height: 43px;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface);
+        color: var(--primary-dark);
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .mobile-menu {
+        position: fixed;
+        top: 66px;
+        left: 0;
+        right: 0;
+        z-index: 490;
+        max-height: calc(100dvh - 66px);
+        padding: 12px 20px 22px;
+        overflow-y: auto;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .mobile-menu.open {
+        display: block;
+      }
+
+      .mobile-menu .nav-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px;
+      }
+
+      .mobile-menu .nav-links a {
+        min-height: 43px;
+        padding: 9px;
+        font-size: 13px;
+      }
+
+      .mobile-menu .sidebar-resume {
+        margin-top: 12px;
+      }
+
+      main {
+        margin-left: 0;
+        padding-top: 0;
+      }
+
+      .container {
+        width: calc(100% - 36px);
+      }
+
+      section {
+        padding: 46px 0;
+        scroll-margin-top: 72px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 76px 0 72px;
+      }
+
+      .hero h1 {
+        font-size: clamp(39px, 10vw, 58px);
+        letter-spacing: -1px;
+      }
+
+      .hero-role {
+        font-size: 18px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      .section-heading {
+        margin-bottom: 22px;
+      }
+
+      .content-card {
+        padding: 21px 19px;
+        margin-bottom: 15px;
+        border-radius: 11px;
+      }
+
+      .content-card h3,
+      .content-card h4 {
+        font-size: 20px;
+      }
+
+      .project-grid,
+      .skill-grid,
+      .education-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+      }
+
+      .timeline {
+        padding-left: 19px;
+      }
+
+      .timeline .content-card::before {
+        left: -28px;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+      }
+
+      .button {
+        width: 100%;
+        min-height: 48px;
+      }
+
+      footer {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .container {
+        width: calc(100% - 28px);
+      }
+
+      .mobile-header {
+        padding-right: 14px;
+        padding-left: 14px;
+      }
+
+      .mobile-menu {
+        padding-right: 14px;
+        padding-left: 14px;
+      }
+
+      .mobile-menu .nav-links {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .content-card {
+        padding: 18px 15px;
+      }
+
+      .hero h1 {
+        font-size: 37px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Navigation Menu: Desktop -->
-  <nav class="hide-on-small-only">
-    <ul class="side-nav fixed section table-of-contents">
-
-      <li class="logo">
-        <a id="logo-container"
-          aria-label="Navigate to the beginning of the page"
-          href="#intro" class="brand-logo grey-blue-text">
-          <img src="/assets/img/passport-new.jpg"
-            class="circle img-responsive profile-pic"
-            alt="Moesha Woods profile photo">
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-social-person small"></i><span>About</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Experience section"
-          href="#experience" class="waves-effect waves-dark teal-text">
-          <i class="mdi-action-trending-up small"></i><span>Experience</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-av-my-library-books small"></i><span>Projects</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-action-assessment small"></i><span>Skills</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-social-school small"></i><span>Education</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Contact section" href="#contact"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-content-mail small"></i><span>Contact</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Open Moesha Woods' resume in a new tab"
-          href="#resume" target="_blank"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-file-folder-open small"></i><span>Resume</span>
-        </a>
-      </li>
-
-    </ul>
-  </nav>
-
-  <!-- Navigation Menu: Mobile Header -->
-  <nav class="hide-on-large-only trigger z-depth-1">
-    <a aria-label="Toggle visibility of the mobile navbar"
-      href="#" data-activates="slide-out" class="button-collapse">
-      <i class="mdi-navigation-menu"></i>
+  <!-- Desktop navigation -->
+  <aside class="sidebar" aria-label="Main navigation">
+    <a class="brand" href="#intro">
+      <span class="brand-mark">MW</span>
+      <span>
+        <span class="brand-name">Moesha Woods</span>
+        <span class="brand-subtitle">Computer Science</span>
+      </span>
     </a>
 
-    <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page"
-        href="#intro" class="teal-text">Moesha Woods</a>
-      <span class="black-text">Machine Learning / Data Science</span>
-    </div>
-  </nav>
+    <p class="nav-label">Portfolio</p>
 
-  <!-- Navigation Menu: Mobile Links -->
-  <nav class="hide-on-large-only">
-    <ul id="slide-out" class="side-nav">
-
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-social-person small"></i><span>About</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Experience section"
-          href="#experience" class="waves-effect waves-dark teal-text">
-          <i class="mdi-action-trending-up small"></i><span>Experience</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-av-my-library-books small"></i><span>Projects</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-action-assessment small"></i><span>Skills</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-social-school small"></i><span>Education</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Contact section" href="#contact"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-content-mail small"></i><span>Contact</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Open Moesha Woods' resume"
-          href="#resume" target="_blank"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-file-folder-open small"></i><span>Resume</span>
-        </a>
-      </li>
-
+    <ul class="nav-links">
+      <li><a href="#intro"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+      <li><a href="#about"><i class="fa fa-user" aria-hidden="true"></i> About Me</a></li>
+      <li><a href="#experience"><i class="fa fa-briefcase" aria-hidden="true"></i> Experience</a></li>
+      <li><a href="#projects"><i class="fa fa-folder-open" aria-hidden="true"></i> Projects</a></li>
+      <li><a href="#skills"><i class="fa fa-code" aria-hidden="true"></i> Skills</a></li>
+      <li><a href="#education"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Education</a></li>
+      <li><a href="#certifications"><i class="fa fa-certificate" aria-hidden="true"></i> Certifications</a></li>
+      <li><a href="#leadership"><i class="fa fa-users" aria-hidden="true"></i> Leadership</a></li>
+      <li><a href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a></li>
     </ul>
+
+    <div class="sidebar-bottom">
+      <a class="sidebar-resume"
+         href="assets/resume/Moesha%20Woods%20final%20resume%20(1)%20(1).pdf"
+         target="_blank" rel="noopener noreferrer">
+        <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+        View Resume PDF
+      </a>
+      <p class="sidebar-note">Thanks for visiting my portfolio.</p>
+    </div>
+  </aside>
+
+  <!-- Mobile navigation -->
+  <header class="mobile-header">
+    <a class="mobile-brand" href="#intro">
+      <span class="brand-mark">MW</span>
+      <span>Moesha Woods</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <ul class="nav-links">
+      <li><a href="#intro">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <a class="sidebar-resume"
+       href="assets/resume/Moesha%20Woods%20final%20resume%20(1)%20(1).pdf"
+       target="_blank" rel="noopener noreferrer">
+      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+      View Resume PDF
+    </a>
   </nav>
 
-  <!-- Main Content -->
-  <main>
+  <main id="main-content">
 
     <!-- Introduction -->
-    <section id="intro" class="section scrollspy full-height">
-      <div class="overlay"></div>
+    <section id="intro" class="hero">
       <div class="container">
-        <div class="col-md-9">
-          <div class="content section-padding valign"
-            style="margin-left: 10%; margin-top: 50px;">
+        <div class="hero-content">
+          <span class="hero-kicker">Welcome to my portfolio</span>
 
-            <div class="caption">
-              <h2>Hi, I'm <span class="teal">Moesha Woods.</span></h2>
+          <h1>Hi, I'm <span>Moesha Woods.</span></h1>
 
-              <h5 style="color:#fff">
-                A <span class="typing"
-                  style="font-weight: 300; color:#004d40"></span>
-              </h5>
+          <p class="hero-role">
+            Computer Science Professional | Machine Learning | Data Science
+          </p>
 
-              <h5>
-                Computer Science professional with a background in software
-                engineering, data analysis, and research. I am interested in
-                applying programming, analytical thinking, and problem-solving
-                skills to machine learning and data science challenges.
-              </h5>
-            </div>
+          <p class="hero-description">
+            I enjoy using programming, data analysis, and research to understand
+            complex problems and develop practical solutions. My interests include
+            machine learning, scientific computing, and data-driven applications.
+          </p>
 
-            <div class="social">
-              <a href="https://www.linkedin.com/in/moesha-w-8143aa83"
-                target="_blank" rel="noopener noreferrer"
-                aria-label="Moesha Woods on LinkedIn">
-                <button class="icon-btn linkedin" type="button">
-                  <i class="fa fa-linkedin"></i>
-                </button>
-              </a>
-
-              <a href="https://github.com/moeshaw"
-                target="_blank" rel="noopener noreferrer"
-                aria-label="Moesha Woods on GitHub">
-                <button class="icon-btn github" type="button">
-                  <i class="fa fa-github"></i>
-                </button>
-              </a>
-            </div>
-
-            <div class="buttons">
-              <a href="#about" class="readme">Read More</a>
-              <a href="#contact" class="contactme">Contact Me</a>
-            </div>
-
+          <div class="buttons">
+            <a class="button" href="#about">
+              About Me <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="button button-secondary" href="#projects">
+              Explore Projects
+            </a>
+            <a class="button button-secondary" href="#contact">
+              Get in Touch
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About: To be updated in the next Git issue -->
-    <section id="about" class="section scrollspy">
-      <h3 class="page-title white-text teal">About</h3>
-      <div class="container flow-text">
-        <p>
-          About section content will be updated in the next Git issue.
-        </p>
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">A little about me</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-description">
+            My background brings together software engineering, research,
+            data analysis, and a growing interest in machine learning.
+          </p>
+        </div>
+
+        <div class="content-card about-copy">
+          <p>
+            I am a computer science professional with a background in software
+            engineering, data analysis, and research. I enjoy breaking down
+            complex problems, learning new technologies, and using data to
+            investigate questions and develop useful solutions.
+          </p>
+
+          <p>
+            My experience includes analyzing metabolite data to investigate
+            potential indicators of Parkinson's disease, contributing to
+            software development and application prototypes, and participating
+            in collaborative research projects.
+          </p>
+
+          <p>
+            I am particularly interested in machine learning and data science.
+            I want to continue building my technical skills in Python,
+            scientific computing, data analysis, and software development while
+            contributing to projects with practical applications.
+          </p>
+
+          <p>
+            I am pursuing a Master of Science in Computer Science at the
+            University of Michigan–Flint, with expected graduation in 2027.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Experience: To be updated in the next Git issue -->
-    <section id="experience" class="section scrollspy">
-      <h3 class="page-title white-text teal">Experience</h3>
+    <!-- Experience -->
+    <section id="experience">
       <div class="container">
-        <p>
-          Experience section content will be updated in the next Git issue.
-        </p>
+        <div class="section-heading">
+          <span class="eyebrow">My professional journey</span>
+          <h2 class="section-title">Experience</h2>
+          <p class="section-description">
+            Research, software development, and collaborative project experience.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="content-card">
+            <h3>Research Assistant / Intern</h3>
+            <p class="role">Bergische University of Wuppertal (BUW)</p>
+            <p class="meta">Wuppertal, Germany · Dates to be confirmed</p>
+            <ul>
+              <li>
+                Contributed to backend and frontend development for research
+                projects, including an online code editor teaching tool.
+              </li>
+              <li>
+                Worked on application features and programming-related tasks
+                involving Java and web technologies.
+              </li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h3>Research Assistant</h3>
+            <p class="role">University of Michigan–Flint</p>
+            <p class="meta">Flint, Michigan · October 2015 – September 2016</p>
+            <ul>
+              <li>
+                Participated in website development planning and worked on
+                creating user-friendly interfaces.
+              </li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h3>Developer Intern</h3>
+            <p class="role">North America Bancard</p>
+            <p class="meta">Troy, Michigan · July 2016 – August 2016</p>
+            <ul>
+              <li>Participated in Agile sprint planning.</li>
+              <li>Installed software packages and worked in an Ubuntu environment.</li>
+              <li>Gained experience with GitHub and version control.</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h3>Independent Research / International Experience</h3>
+            <p class="role">Rethinking Social Development</p>
+            <p class="meta">East Cape Town, South Africa · July 2017 – August 2017</p>
+            <ul>
+              <li>
+                Supported educational activities, community-based learning,
+                creative collaboration, and problem-solving.
+              </li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- Projects: To be updated in the next Git issue -->
-    <section id="projects" class="section scrollspy">
-      <h3 class="page-title white-text teal">Projects</h3>
+    <!-- Projects -->
+    <section id="projects">
       <div class="container">
-        <div class="row">
-          <div class="col s12">
+        <div class="section-heading">
+          <span class="eyebrow">Selected work</span>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-description">
+            Research, application development, and technical projects.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="content-card">
+            <h3 class="project-title">Predicting Parkinson's Disease with Metabolites</h3>
             <p>
-              Projects section content will be updated in the next Git issue.
+              Contributed to a research project analyzing metabolite data to
+              investigate potential indicators of Parkinson's disease.
             </p>
-          </div>
+            <ul>
+              <li>
+                Analyzed more than 200 metabolites using Knowledge Discovery
+                in Databases (KDD) processes.
+              </li>
+              <li>Contributed to data analysis and reporting.</li>
+              <li>
+                Identified two metabolites for further investigation. The
+                sample of 78 patients limited definitive generalizations.
+              </li>
+            </ul>
+            <p><strong>Technologies</strong></p>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>Google Colab</li>
+              <li>scikit-learn</li>
+              <li>NumPy</li>
+              <li>Pandas</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h3 class="project-title">My Diet Tracker</h3>
+            <p>
+              Collaborated on a research-driven mobile application prototype
+              focused on dietary health tracking.
+            </p>
+            <ul>
+              <li>Contributed to application functions and user-centered design.</li>
+              <li>Participated in user research, data coding, and usability testing.</li>
+            </ul>
+            <p><strong>Technologies</strong></p>
+            <ul class="tag-list">
+              <li>Android Studio</li>
+              <li>Java</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h3 class="project-title">Nerf Sentry Turret</h3>
+            <p>
+              Collaborated on a Raspberry Pi-powered prototype featuring
+              manual and automated operating modes.
+            </p>
+            <ul>
+              <li>Contributed to motion detection and target localization.</li>
+              <li>Participated in prototype testing.</li>
+            </ul>
+            <p><strong>Technologies</strong></p>
+            <ul class="tag-list">
+              <li>Raspberry Pi</li>
+              <li>Python 2.7</li>
+              <li>OpenCV</li>
+              <li>UML</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h3 class="project-title">Online Code Editor Teaching Tool</h3>
+            <p>
+              Developed prototype user-interface features for an educational
+              code editor designed to support programming instruction.
+            </p>
+            <ul>
+              <li>Implemented syntax highlighting features.</li>
+              <li>Worked on code and line markers within the editor interface.</li>
+            </ul>
+            <p><strong>Technologies</strong></p>
+            <ul class="tag-list">
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>jQuery</li>
+              <li>WebSockets</li>
+              <li>Tomcat</li>
+              <li>Eclipse</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h3 class="project-title">Project-Go Campus App Proposal</h3>
+            <p>
+              Contributed to planning a proposed campus application intended
+              to help users explore campus locations, ratings, and events.
+            </p>
+            <ul>
+              <li>Assisted with project timelines and budgets.</li>
+              <li>Contributed to research, UML diagrams, and user-interface designs.</li>
+            </ul>
+            <p><strong>Focus</strong></p>
+            <ul class="tag-list">
+              <li>Project planning</li>
+              <li>Research</li>
+              <li>UML</li>
+              <li>Interface design</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Skills: To be updated in the next Git issue -->
-    <section id="skills" class="section scrollspy">
-      <h3 class="page-title white-text teal">Skills</h3>
+    <!-- Skills -->
+    <section id="skills">
       <div class="container">
-        <p>
-          Skills section content will be updated in the next Git issue.
-        </p>
+        <div class="section-heading">
+          <span class="eyebrow">Technical toolkit</span>
+          <h2 class="section-title">Skills</h2>
+          <p class="section-description">
+            Technologies and methods I have used or am actively learning.
+          </p>
+        </div>
+
+        <div class="skill-grid">
+          <article class="content-card">
+            <h3>Machine Learning & Data Science</h3>
+            <p>
+              Python, scikit-learn, NumPy, Pandas, data analysis,
+              Knowledge Discovery in Databases (KDD).
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h3>Software Development</h3>
+            <p>
+              Java, JavaScript, HTML, jQuery, Git, GitHub, Linux/Ubuntu,
+              Visual Studio Code.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h3>Mobile Development & Design</h3>
+            <p>
+              Swift, iOS development fundamentals, Apple app-development tools,
+              Android Studio, user-centered design, prototyping, and usability testing.
+            </p>
+            <p class="meta">
+              Swift and iOS development are current learning areas through
+              the Apple Foundation Program.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h3>Project Management & Collaboration</h3>
+            <p>
+              Kanban boards, Agile development, design thinking, teamwork,
+              and collaborative problem-solving.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- Education: To be updated in the next Git issue -->
-    <section id="education" class="section scrollspy">
-      <h3 class="page-title white-text teal">Education</h3>
+    <!-- Education -->
+    <section id="education">
       <div class="container">
-        <p>
-          Education section content will be updated in the next Git issue.
-        </p>
+        <div class="section-heading">
+          <span class="eyebrow">Academic background</span>
+          <h2 class="section-title">Education</h2>
+        </div>
+
+        <div class="education-grid">
+          <article class="content-card">
+            <h3>Master of Science in Computer Science</h3>
+            <p class="role">University of Michigan–Flint</p>
+            <p class="meta">Flint, Michigan</p>
+            <p><strong>Expected graduation:</strong> 2027</p>
+          </article>
+
+          <article class="content-card">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p class="role">Software Engineering Concentration</p>
+            <p class="meta">University of Michigan–Flint · Flint, Michigan</p>
+            <p><strong>Graduated:</strong> 2019</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Credentials & learning</span>
+          <h2 class="section-title">Certifications & Professional Development</h2>
+        </div>
+
+        <article class="content-card">
+          <h3>Pega Certified System Architect</h3>
+          <p class="meta">Platform Version 8 · March 2020</p>
+        </article>
+
+        <article class="content-card">
+          <h3>Apple Foundation Program, powered by Ed Farm</h3>
+          <p class="role">In progress</p>
+          <p class="meta">Start date: August 24, 2026</p>
+          <p>
+            An eight-week, 80-hour program covering iOS app development
+            fundamentals, design thinking, digital literacy, and
+            challenge-based collaborative learning.
+          </p>
+          <p>
+            <a href="https://www.edfarm.org/programs/workforce"
+               target="_blank" rel="noopener noreferrer">
+              Explore Ed Farm Workforce Programs
+              <i class="fa fa-external-link" aria-hidden="true"></i>
+            </a>
+          </p>
+        </article>
+
+        <div class="education-grid">
+          <article class="content-card">
+            <h3>InternMe in 3</h3>
+            <p class="meta">University of Michigan–Flint · 2018</p>
+          </article>
+
+          <article class="content-card">
+            <h3>Corporate Case Competition</h3>
+            <p class="meta">University of Michigan–Flint · 2019</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Community & involvement</span>
+          <h2 class="section-title">Leadership & Memberships</h2>
+        </div>
+
+        <div class="content-card">
+          <ul>
+            <li>Upsilon Pi Epsilon, Computer Science Honor Society</li>
+            <li>University of Michigan African Student Association</li>
+            <li>National Society of Blacks in Engineering</li>
+            <li>University of Michigan Block Club</li>
+            <li>Association for Computing Machinery (ACM)</li>
+            <li>National Society of Leadership & Success</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section scrollspy full-height">
-      <h3 class="page-title white-text teal">Contact</h3>
+    <section id="contact">
       <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Let's connect</span>
+          <h2 class="section-title">Contact</h2>
+          <p class="section-description">
+            Feel free to reach out or explore my professional profiles.
+          </p>
+        </div>
 
-        <p>
-          <a aria-label="Email Moesha Woods"
-            href="mailto:Moeshawoods13@gmail.com"
-            data-position="top" data-tooltip="Email Moesha Woods"
-            class="hoverline">
-            <i class="fa fa-envelope"></i>
-            Moeshawoods13@gmail.com
-          </a>
-        </p>
+        <div class="content-card">
+          <ul class="contact-list">
+            <li>
+              <span class="contact-icon">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </span>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:Moeshawoods13@gmail.com">
+                  Moeshawoods13@gmail.com
+                </a>
+              </div>
+            </li>
 
-        <p>
-          <a aria-label="View Moesha Woods on GitHub"
-            href="https://github.com/moeshaw"
-            target="_blank" rel="noopener noreferrer"
-            class="hoverline">
-            <i class="fa fa-github"></i>
-            github.com/moeshaw
-          </a>
-        </p>
+            <li>
+              <span class="contact-icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </span>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/moeshaw"
+                   target="_blank" rel="noopener noreferrer">
+                  github.com/moeshaw
+                </a>
+              </div>
+            </li>
 
-        <p>
-          <a aria-label="View Moesha Woods on LinkedIn"
-            href="https://www.linkedin.com/in/moesha-w-8143aa83"
-            target="_blank" rel="noopener noreferrer"
-            class="hoverline">
-            <i class="fa fa-linkedin"></i>
-            linkedin.com/in/moesha-w-8143aa83
-          </a>
-        </p>
+            <li>
+              <span class="contact-icon">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </span>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/moesha-w-8143aa83"
+                   target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/moesha-w-8143aa83
+                </a>
+              </div>
+            </li>
 
+            <li>
+              <span class="contact-icon">
+                <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+              </span>
+              <div>
+                <span class="contact-label">Resume</span>
+                <a href="assets/resume/Moesha%20Woods%20final%20resume%20(1)%20(1).pdf"
+                   target="_blank" rel="noopener noreferrer">
+                  View My Resume PDF
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
-
   </main>
 
-  <!-- Typed.js -->
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script>
-    var typed = new Typed('.typing', {
-      strings: [
-        "Machine Learning Enthusiast",
-        "Data Science Professional",
-        "Computer Science Graduate Student",
-        "Researcher"
-      ],
-      loop: true,
-      typeSpeed: 80,
-      backSpeed: 40
-    });
-  </script>
-
-  <!-- jQuery -->
-  <script
-    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-  </script>
-
-  <!-- Materialize - Compiled and minified JavaScript -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js">
-  </script>
+  <footer>
+    <p>© <span id="year">2026</span> Moesha Woods. All rights reserved.</p>
+  </footer>
 
   <script>
-    // Materialize initializers
-    $(document).ready(function () {
-      $(".scrollspy").scrollSpy();
+    (function () {
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      const menuIcon = toggle.querySelector("i");
 
-      $(".button-collapse").sideNav({
-        menuWidth: 190,
-        edge: "left",
-        closeOnClick: true
+      function closeMenu() {
+        menu.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open navigation menu");
+        menuIcon.className = "fa fa-bars";
+      }
+
+      toggle.addEventListener("click", function () {
+        const isOpen = menu.classList.toggle("open");
+
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+        menuIcon.className = isOpen ? "fa fa-times" : "fa fa-bars";
       });
-    });
-  </script>
 
+      menu.querySelectorAll("a[href^='#']").forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeMenu();
+          toggle.focus();
+        }
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 760) {
+          closeMenu();
+        }
+      });
+
+      document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+      const sections = document.querySelectorAll("main section[id]");
+      const navLinks = document.querySelectorAll(".nav-links a");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              navLinks.forEach(function (link) {
+                const active =
+                  link.getAttribute("href") === "#" + entry.target.id;
+
+                if (active) {
+                  link.classList.add("active");
+                  link.setAttribute("aria-current", "location");
+                } else {
+                  link.classList.remove("active");
+                  link.removeAttribute("aria-current");
+                }
+              });
+            }
+          });
+        }, {
+          rootMargin: "-25% 0px -60% 0px",
+          threshold: 0
+        });
+
+        sections.forEach(function (section) {
+          observer.observe(section);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
