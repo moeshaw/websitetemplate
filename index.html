@@ -6,195 +6,291 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+  <title>Moesha Woods | Machine Learning & Data Science</title>
+
   <meta name="author" content="Moesha Woods" />
-  <meta name="description" content="Computer science professional pursuing a Master of Science in Computer Science at the University of Michigan–Flint, with experience in software engineering, data analysis, and research. Interested in machine learning and data science." />
+  <meta name="description" content="Moesha Woods is a computer science professional with experience in software engineering, data analysis, and research, with an interest in machine learning and data science." />
   <meta name="robots" content="index, follow" />
 
-  <title>Moesha Woods | Machine Learning &amp; Data Science</title>
-
-  <!-- Open Graph -->
-  <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Moesha Woods | Machine Learning &amp; Data Science" />
+  <meta property="og:title" content="Moesha Woods | Machine Learning & Data Science" />
   <meta property="og:description" content="Computer science professional with experience in software engineering, data analysis, and research." />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Moesha Woods | Machine Learning &amp; Data Science" />
-  <meta name="twitter:description" content="Computer science professional interested in machine learning and data science." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Materialize CSS -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    body {
+      color: #263238;
+      background-color: #f7f9fa;
+      font-size: 16px;
+      line-height: 1.8;
+    }
 
-  <!-- Original template stylesheet -->
-  <link rel="stylesheet" href="/assets/css/style.css" />
+    p, li {
+      color: #37474f;
+      line-height: 1.8;
+    }
 
-  <meta name="theme-color" content="#ffffff" />
+    h1, h2, h3, h4, h5 {
+      line-height: 1.4;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+    }
+
+    h3.page-title {
+      padding: 18px 25px;
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    section {
+      padding-bottom: 35px;
+    }
+
+    .intro-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #e0f2f1, #f7f9fa);
+    }
+
+    .intro-content {
+      max-width: 850px;
+      padding: 35px 20px;
+    }
+
+    .intro-content h2 {
+      color: #263238;
+      font-weight: 600;
+    }
+
+    .intro-content h2 span {
+      color: #00796b;
+    }
+
+    .intro-content h5 {
+      color: #37474f;
+      font-size: 1.25rem;
+      margin-top: 25px;
+      max-width: 760px;
+    }
+
+    .intro-role {
+      color: #00796b !important;
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 5px 10px 5px 0;
+      padding: 10px 20px;
+      border-radius: 4px;
+      background-color: #00796b;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .buttons a:hover,
+    .buttons a:focus {
+      background-color: #004d40;
+      color: #fff;
+    }
+
+    .content-card {
+      background: #fff;
+      border-radius: 5px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .section-text {
+      font-size: 1.1rem;
+    }
+
+    .role {
+      font-weight: 600;
+      margin: 10px 0;
+    }
+
+    .card-action {
+      padding: 15px 20px;
+      border-top: 1px solid #eee;
+      color: #546e7a;
+    }
+
+    .project-title {
+      color: #00796b;
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+
+    .skill-category {
+      margin-bottom: 20px;
+    }
+
+    .skill-category h4 {
+      color: #00796b;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .resume-link {
+      display: inline-block;
+      background: #00796b;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .resume-link:hover,
+    .resume-link:focus {
+      background: #004d40;
+      color: #fff;
+    }
+
+    .contact-link {
+      color: #00796b;
+      overflow-wrap: anywhere;
+    }
+
+    .side-nav a {
+      color: #00796b;
+    }
+
+    .side-nav span {
+      color: #00796b;
+    }
+
+    a:focus {
+      outline: 2px solid #00796b;
+      outline-offset: 3px;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      color: #546e7a;
+    }
+
+    @media only screen and (max-width: 600px) {
+      h2 {
+        font-size: 2rem;
+      }
+
+      .intro-content {
+        padding: 25px 15px;
+      }
+
+      .intro-content h5 {
+        font-size: 1.1rem;
+      }
+
+      h3.page-title {
+        font-size: 1.7rem;
+      }
+
+      .content-card {
+        padding: 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- Desktop Navigation -->
-  <nav class="hide-on-small-only">
+  <nav class="hide-on-med-and-down">
     <ul class="side-nav fixed section table-of-contents">
-
       <li class="logo">
-        <a id="logo-container"
-          aria-label="Navigate to the beginning of the page"
-          href="#intro"
-          class="brand-logo grey-blue-text">
-          <span class="teal-text">MW</span>
+        <a href="#intro" class="brand-logo">
+          <span style="font-size: 1.4rem; font-weight: 600;">MW</span>
         </a>
       </li>
-
-      <li class="bold">
-        <a href="#about" class="waves-effect waves-dark teal-text">
-          <i class="mdi-social-person small"></i><span>About</span>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <a href="assets/resume/Moesha%20Woods%20final%20resume%20(1)%20(1).pdf"
+           target="_blank" rel="noopener noreferrer">
+          Resume PDF
         </a>
       </li>
-
-      <li class="bold">
-        <a href="#education" class="waves-effect waves-dark teal-text">
-          <i class="mdi-social-school small"></i><span>Education</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a href="#experience" class="waves-effect waves-dark teal-text">
-          <i class="mdi-action-trending-up small"></i><span>Experience</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a href="#projects" class="waves-effect waves-dark teal-text">
-          <i class="mdi-av-my-library-books small"></i><span>Projects</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a href="#skills" class="waves-effect waves-dark teal-text">
-          <i class="mdi-action-assessment small"></i><span>Skills</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a href="#certifications" class="waves-effect waves-dark teal-text">
-          <i class="mdi-file-folder-open small"></i><span>Certifications</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a href="#leadership" class="waves-effect waves-dark teal-text">
-          <i class="mdi-social-group small"></i><span>Leadership</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a href="#contact" class="waves-effect waves-dark teal-text">
-          <i class="mdi-content-mail small"></i><span>Contact</span>
-        </a>
-      </li>
-
-      <li class="bold">
-        <a href="mailto:MoeshaWoods13@gmail.com"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-communication-email small"></i><span>Email Me</span>
-        </a>
-      </li>
-
     </ul>
   </nav>
 
   <!-- Mobile Navigation -->
-  <nav class="hide-on-large-only trigger z-depth-1">
-    <a aria-label="Toggle navigation"
-      href="#"
-      data-activates="slide-out"
-      class="button-collapse">
-      <i class="mdi-navigation-menu"></i>
-    </a>
-
-    <div class="name-title">
-      <a id="name" href="#intro" class="teal-text">Moesha Woods</a>
-      <span class="black-text">Machine Learning &amp; Data Science</span>
+  <nav class="hide-on-large-only">
+    <div class="nav-wrapper teal">
+      <a href="#intro" class="brand-logo" style="font-size: 1.25rem; margin-left: 15px;">
+        Moesha Woods
+      </a>
+      <a href="#" data-activates="mobile-menu" class="button-collapse right"
+         aria-label="Open navigation menu">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
   </nav>
 
-  <nav class="hide-on-large-only">
-    <ul id="slide-out" class="side-nav">
+  <ul id="mobile-menu" class="side-nav">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li>
+      <a href="assets/resume/Moesha%20Woods%20final%20resume%20(1)%20(1).pdf"
+         target="_blank" rel="noopener noreferrer">
+        Resume PDF
+      </a>
+    </li>
+  </ul>
 
-      <li class="bold"><a href="#about" class="teal-text">About</a></li>
-      <li class="bold"><a href="#education" class="teal-text">Education</a></li>
-      <li class="bold"><a href="#experience" class="teal-text">Experience</a></li>
-      <li class="bold"><a href="#projects" class="teal-text">Projects</a></li>
-      <li class="bold"><a href="#skills" class="teal-text">Skills</a></li>
-      <li class="bold"><a href="#certifications" class="teal-text">Certifications</a></li>
-      <li class="bold"><a href="#leadership" class="teal-text">Leadership</a></li>
-      <li class="bold"><a href="#contact" class="teal-text">Contact</a></li>
-
-    </ul>
-  </nav>
-
-  <!-- Main Content -->
   <main>
 
     <!-- Introduction -->
-    <section id="intro" class="section scrollspy full-height">
-      <div class="overlay"></div>
-
+    <section id="intro" class="section scrollspy intro-section">
       <div class="container">
-        <div class="col-md-9">
-          <div class="content section-padding valign"
-            style="margin-left: 10%; margin-top: 50px;">
+        <div class="intro-content">
+          <h2>Hi, I'm <span>Moesha Woods.</span></h2>
 
-            <div class="caption">
-              <h2>Hi, I'm <span class="teal">Moesha Woods.</span></h2>
+          <h5 class="intro-role">
+            Computer Science Professional | Machine Learning | Data Science
+          </h5>
 
-              <h5 style="color:#fff">
-                Interested in
-                <span class="typing"
-                  style="font-weight: 300; color:#004d40"></span>
-              </h5>
+          <h5>
+            I enjoy using programming, data analysis, and research to understand
+            complex problems and develop practical solutions. My interests include
+            machine learning, scientific computing, and data-driven applications.
+          </h5>
 
-              <h5>
-                Computer science professional with a background in software
-                engineering, data analysis, and research. I enjoy using
-                programming, analytical thinking, and problem-solving to
-                explore meaningful challenges in machine learning and data
-                science.
-              </h5>
-            </div>
-
-            <div class="social">
-              <a href="https://www.linkedin.com/in/moesha-w-8143aa83"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn profile">
-                <button class="icon-btn linkedin">
-                  <i class="fa fa-linkedin"></i>
-                </button>
-              </a>
-
-              <a href="https://github.com/moeshaw"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub profile">
-                <button class="icon-btn github">
-                  <i class="fa fa-github"></i>
-                </button>
-              </a>
-            </div>
-
-            <div class="buttons">
-              <a href="#about" class="readme">Read More</a>
-              <a href="#contact" class="contactme">Contact Me</a>
-            </div>
-
+          <div class="buttons">
+            <a href="#about">Learn More About Me</a>
+            <a href="#projects">View My Projects</a>
+            <a href="#contact">Contact Me</a>
           </div>
         </div>
       </div>
@@ -202,102 +298,35 @@
 
     <!-- About -->
     <section id="about" class="section scrollspy">
-      <h3 class="page-title white-text teal">About</h3>
-
-      <div class="container flow-text">
-
-        <p>
-          I am a computer science professional pursuing a Master of Science
-          in Computer Science at the University of Michigan–Flint, with an
-          academic background in software engineering. My experience spans
-          software development, data analysis, research, and application
-          prototyping.
-        </p>
-
-        <p>
-          My research experience includes analyzing more than 200 metabolites
-          to investigate potential indicators of Parkinson's disease using
-          Python and scientific computing libraries. I have also contributed
-          to software projects involving educational tools, mobile
-          applications, and computer vision.
-        </p>
-
-        <p>
-          I am interested in applying machine learning, data science, and
-          analytical problem-solving to real-world challenges. I am also
-          expanding my skills in iOS development and design thinking through
-          the Apple Foundation Program.
-        </p>
-
-        <p>
-          My goal is to continue developing my technical and analytical skills
-          while contributing to collaborative projects that combine software
-          engineering, research, and data-driven problem-solving.
-        </p>
-
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="section scrollspy">
-      <h3 class="page-title white-text teal">Education</h3>
+      <h3 class="page-title white-text teal">About Me</h3>
 
       <div class="container">
-        <div class="row">
+        <div class="content-card section-text">
+          <p>
+            I am a computer science professional with a background in software
+            engineering, data analysis, and research. I enjoy breaking down
+            complex problems, learning new technologies, and using data to
+            investigate questions and develop useful solutions.
+          </p>
 
-          <div class="col s12 m6 l6">
-            <div class="card">
-              <div class="card-content">
+          <p>
+            My experience includes analyzing metabolite data to investigate
+            potential indicators of Parkinson's disease, contributing to
+            software development and application prototypes, and participating
+            in collaborative research projects.
+          </p>
 
-                <p>
-                  <span class="card-title">
-                    <a href="https://www.umflint.edu/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="teal-text hoverline">
-                      University of Michigan–Flint
-                    </a>
-                  </span>
-                </p>
+          <p>
+            I am particularly interested in machine learning and data science.
+            I want to continue building my technical skills in Python,
+            scientific computing, data analysis, and software development while
+            contributing to projects with practical applications.
+          </p>
 
-                <p class="brown-text">Flint, Michigan</p>
-
-                <p>
-                  <b>Degree:</b> Master of Science in Computer Science<br />
-                  <b>Expected Graduation:</b> 2027
-                </p>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m6 l6">
-            <div class="card">
-              <div class="card-content">
-
-                <p>
-                  <span class="card-title">
-                    <a href="https://www.umflint.edu/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="teal-text hoverline">
-                      University of Michigan–Flint
-                    </a>
-                  </span>
-                </p>
-
-                <p class="brown-text">Flint, Michigan</p>
-
-                <p>
-                  <b>Degree:</b> Bachelor of Science in Computer Science<br />
-                  <b>Concentration:</b> Software Engineering<br />
-                  <b>Graduated:</b> 2019
-                </p>
-
-              </div>
-            </div>
-          </div>
-
+          <p>
+            I am pursuing a Master of Science in Computer Science at the
+            University of Michigan–Flint, with expected graduation in 2027.
+          </p>
         </div>
       </div>
     </section>
@@ -308,138 +337,59 @@
 
       <div class="container">
 
-        <!-- BUW -->
-        <div class="card">
-          <div class="card-content">
-
-            <p>
-              <span class="card-title teal-text hoverline">
-                Bergische University of Wuppertal (BUW)
-              </span>
-            </p>
-
-            <div class="role brown-text text-darken-2">
-              Research Assistant / Intern
-            </div>
-
-            <ul>
-              <li>
-                Contributed to backend and frontend development for research
-                projects, including an online code editor teaching tool.
-              </li>
-              <li>
-                Worked on advanced Java programming and educational software
-                development.
-              </li>
-              <li>
-                <b>Technologies:</b> Java, JavaScript, HTML, jQuery,
-                WebSockets, Tomcat, Eclipse.
-              </li>
-            </ul>
-
-          </div>
-
-          <div class="card-action">
-            <span>Dates to be confirmed | Wuppertal, Germany</span>
-          </div>
+        <div class="content-card">
+          <h4>Research Assistant / Intern</h4>
+          <p class="role">Bergische University of Wuppertal (BUW)</p>
+          <p>Wuppertal, Germany</p>
+          <ul>
+            <li>
+              Contributed to backend and frontend development for research
+              projects, including an online code editor teaching tool.
+            </li>
+            <li>
+              Worked on application features and programming-related tasks
+              involving Java and web technologies.
+            </li>
+          </ul>
+          <p><b>Dates:</b> To be confirmed.</p>
         </div>
 
-        <!-- University of Michigan-Flint -->
-        <div class="card">
-          <div class="card-content">
-
-            <p>
-              <span class="card-title teal-text hoverline">
-                University of Michigan–Flint
-              </span>
-            </p>
-
-            <div class="role brown-text text-darken-2">
-              Research Assistant
-            </div>
-
-            <ul>
-              <li>
-                Participated in website development planning and worked
-                on designing user-friendly interfaces.
-              </li>
-              <li>
-                Contributed to collaborative research and software planning
-                activities.
-              </li>
-            </ul>
-
-          </div>
-
-          <div class="card-action">
-            <span>October 2015 – September 2016 | Flint, Michigan</span>
-          </div>
+        <div class="content-card">
+          <h4>Research Assistant</h4>
+          <p class="role">University of Michigan–Flint</p>
+          <p>Flint, Michigan</p>
+          <p><b>October 2015 – September 2016</b></p>
+          <ul>
+            <li>
+              Participated in website development planning and worked on
+              creating user-friendly interfaces.
+            </li>
+          </ul>
         </div>
 
-        <!-- North America Bancard -->
-        <div class="card">
-          <div class="card-content">
-
-            <p>
-              <span class="card-title teal-text hoverline">
-                North America Bancard
-              </span>
-            </p>
-
-            <div class="role brown-text text-darken-2">
-              Developer Intern
-            </div>
-
-            <ul>
-              <li>
-                Participated in Agile sprint planning and software
-                development activities.
-              </li>
-              <li>
-                Installed software packages, worked with Ubuntu, and gained
-                experience with GitHub and version control.
-              </li>
-              <li>
-                <b>Tools:</b> Ubuntu, Git, GitHub.
-              </li>
-            </ul>
-
-          </div>
-
-          <div class="card-action">
-            <span>July 2016 – August 2016 | Troy, Michigan</span>
-          </div>
+        <div class="content-card">
+          <h4>Developer Intern</h4>
+          <p class="role">North America Bancard</p>
+          <p>Troy, Michigan</p>
+          <p><b>July 2016 – August 2016</b></p>
+          <ul>
+            <li>Participated in Agile sprint planning.</li>
+            <li>Installed software packages and worked in an Ubuntu environment.</li>
+            <li>Gained experience with GitHub and version control.</li>
+          </ul>
         </div>
 
-        <!-- International Experience -->
-        <div class="card">
-          <div class="card-content">
-
-            <p>
-              <span class="card-title teal-text hoverline">
-                Rethinking Social Development
-              </span>
-            </p>
-
-            <div class="role brown-text text-darken-2">
-              Independent Research / International Experience
-            </div>
-
-            <ul>
-              <li>
-                Supported educational activities and community-based learning.
-              </li>
-              <li>
-                Participated in creative collaboration and community
-                problem-solving.
-              </li>
-            </ul>
-
-          </div>
-
-          <div class="card-action">
-            <span>July 2017 – August 2017 | East Cape Town, South Africa</span>
-          </div>
+        <div class="content-card">
+          <h4>Independent Research / International Experience</h4>
+          <p class="role">Rethinking Social Development</p>
+          <p>East Cape Town, South Africa</p>
+          <p><b>July 2017 – August 2017</b></p>
+          <ul>
+            <li>
+              Supported educational activities, community-based learning,
+              creative collaboration, and problem-solving.
+            </li>
+          </ul>
         </div>
 
       </div>
@@ -450,164 +400,85 @@
       <h3 class="page-title white-text teal">Projects</h3>
 
       <div class="container">
-        <div class="row">
 
-          <!-- Parkinson's Disease -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-
-              <div class="card-content">
-                <span class="card-title teal-text hoverline">
-                  Predicting Parkinson's Disease with Metabolites
-                </span>
-
-                <p>
-                  Research project analyzing metabolite data to investigate
-                  potential indicators of Parkinson's disease.
-                </p>
-
-                <ul>
-                  <li>
-                    Analyzed more than 200 metabolites using Knowledge
-                    Discovery in Databases (KDD) processes.
-                  </li>
-                  <li>
-                    Contributed to data analysis and research reporting.
-                  </li>
-                  <li>
-                    Identified two metabolites for further investigation.
-                    The sample of 78 patients limited definitive
-                    generalizations.
-                  </li>
-                  <li>
-                    <b>Technologies:</b> Python, Google Colab, scikit-learn,
-                    NumPy, Pandas.
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- My Diet Tracker -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-
-              <div class="card-content">
-                <span class="card-title teal-text hoverline">
-                  My Diet Tracker
-                </span>
-
-                <p>
-                  Research-driven mobile application prototype for dietary
-                  health tracking.
-                </p>
-
-                <ul>
-                  <li>
-                    Collaborated on application functions and user-centered
-                    design.
-                  </li>
-                  <li>
-                    Contributed to user research, data coding, and usability
-                    testing.
-                  </li>
-                  <li>
-                    <b>Technologies:</b> Android Studio, Java.
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Nerf Sentry Turret -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-
-              <div class="card-content">
-                <span class="card-title teal-text hoverline">
-                  Nerf Sentry Turret
-                </span>
-
-                <p>
-                  Raspberry Pi-powered prototype featuring manual and
-                  automated modes.
-                </p>
-
-                <ul>
-                  <li>
-                    Collaborated on motion detection, target localization,
-                    and prototype testing.
-                  </li>
-                  <li>
-                    <b>Technologies:</b> Raspberry Pi, Python 2.7,
-                    OpenCV, UML.
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Online Code Editor -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-
-              <div class="card-content">
-                <span class="card-title teal-text hoverline">
-                  Online Code Editor Teaching Tool
-                </span>
-
-                <p>
-                  Educational code editor prototype designed to support
-                  programming instruction.
-                </p>
-
-                <ul>
-                  <li>
-                    Developed prototype interface features, including
-                    syntax highlighting and code and line markers.
-                  </li>
-                  <li>
-                    <b>Technologies:</b> Java, JavaScript, HTML, jQuery,
-                    WebSockets, Tomcat, Eclipse.
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Project-Go -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-
-              <div class="card-content">
-                <span class="card-title teal-text hoverline">
-                  Project-Go Campus App Proposal
-                </span>
-
-                <p>
-                  Proposal for a campus application featuring mapping,
-                  ratings, and campus events.
-                </p>
-
-                <ul>
-                  <li>
-                    Contributed to project planning, timelines, and budgets.
-                  </li>
-                  <li>
-                    Helped develop UML diagrams, conduct research, and
-                    design user interfaces.
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
+        <div class="content-card">
+          <h4 class="project-title">Predicting Parkinson's Disease with Metabolites</h4>
+          <p>
+            Contributed to a research project analyzing metabolite data to
+            investigate potential indicators of Parkinson's disease.
+          </p>
+          <ul>
+            <li>
+              Analyzed more than 200 metabolites using Knowledge Discovery
+              in Databases (KDD) processes.
+            </li>
+            <li>Contributed to data analysis and reporting.</li>
+            <li>
+              Identified two metabolites for further investigation. The
+              sample of 78 patients limited the ability to make definitive
+              generalizations.
+            </li>
+          </ul>
+          <p>
+            <b>Technologies:</b> Python, Google Colab, scikit-learn, NumPy, Pandas
+          </p>
         </div>
+
+        <div class="content-card">
+          <h4 class="project-title">My Diet Tracker</h4>
+          <p>
+            Collaborated on a research-driven mobile application prototype
+            focused on dietary health tracking.
+          </p>
+          <ul>
+            <li>Contributed to application functions and user-centered design.</li>
+            <li>Participated in user research, data coding, and usability testing.</li>
+          </ul>
+          <p><b>Technologies:</b> Android Studio, Java</p>
+        </div>
+
+        <div class="content-card">
+          <h4 class="project-title">Nerf Sentry Turret</h4>
+          <p>
+            Collaborated on a Raspberry Pi-powered prototype featuring manual
+            and automated operating modes.
+          </p>
+          <ul>
+            <li>Contributed to motion detection and target localization.</li>
+            <li>Participated in prototype testing.</li>
+          </ul>
+          <p><b>Technologies:</b> Raspberry Pi, Python 2.7, OpenCV, UML</p>
+        </div>
+
+        <div class="content-card">
+          <h4 class="project-title">Online Code Editor Teaching Tool</h4>
+          <p>
+            Developed prototype user-interface features for an educational
+            code editor designed to support programming instruction.
+          </p>
+          <ul>
+            <li>Implemented syntax highlighting features.</li>
+            <li>Worked on code and line markers within the editor interface.</li>
+          </ul>
+          <p>
+            <b>Technologies:</b> Java, JavaScript, HTML, jQuery, WebSockets,
+            Tomcat, Eclipse
+          </p>
+        </div>
+
+        <div class="content-card">
+          <h4 class="project-title">Project-Go Campus App Proposal</h4>
+          <p>
+            Contributed to planning a proposed campus application intended
+            to help users explore campus locations, ratings, and events.
+          </p>
+          <ul>
+            <li>Assisted with project timelines and budgets.</li>
+            <li>Contributed to research, UML diagrams, and user-interface designs.</li>
+          </ul>
+          <p><b>Focus:</b> Project planning, research, UML, interface design</p>
+        </div>
+
       </div>
     </section>
 
@@ -616,72 +487,66 @@
       <h3 class="page-title white-text teal">Skills</h3>
 
       <div class="container">
+        <div class="content-card">
 
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">
-              Machine Learning and Data Science
-            </h4>
-
-            <ul>
-              <li>Python</li>
-              <li>scikit-learn</li>
-              <li>NumPy</li>
-              <li>Pandas</li>
-              <li>Data analysis</li>
-              <li>Knowledge Discovery in Databases (KDD)</li>
-            </ul>
+          <div class="skill-category">
+            <h4>Machine Learning and Data Science</h4>
+            <p>
+              Python, scikit-learn, NumPy, Pandas, data analysis,
+              Knowledge Discovery in Databases (KDD)
+            </p>
           </div>
+
+          <div class="skill-category">
+            <h4>Software Development</h4>
+            <p>
+              Java, JavaScript, HTML, jQuery, Git, GitHub, Linux/Ubuntu,
+              Visual Studio Code
+            </p>
+          </div>
+
+          <div class="skill-category">
+            <h4>Mobile Development and Design</h4>
+            <p>
+              Swift, iOS development fundamentals, Apple app-development tools,
+              Android Studio, user-centered design, prototyping, usability testing
+            </p>
+            <p>
+              <i>Swift and iOS development are current learning areas through
+              the Apple Foundation Program.</i>
+            </p>
+          </div>
+
+          <div class="skill-category">
+            <h4>Project Management and Collaboration</h4>
+            <p>
+              Kanban boards, Agile development, design thinking, teamwork,
+              collaborative problem-solving
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section scrollspy">
+      <h3 class="page-title white-text teal">Education</h3>
+
+      <div class="container">
+
+        <div class="content-card">
+          <h4>Master of Science in Computer Science</h4>
+          <p class="role">University of Michigan–Flint</p>
+          <p>Flint, Michigan</p>
+          <p><b>Expected Graduation:</b> 2027</p>
         </div>
 
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Software Development</h4>
-
-            <ul>
-              <li>Java</li>
-              <li>JavaScript</li>
-              <li>HTML</li>
-              <li>jQuery</li>
-              <li>Git and GitHub</li>
-              <li>Linux and Ubuntu</li>
-              <li>Visual Studio Code</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">
-              Mobile Development and Design
-            </h4>
-
-            <ul>
-              <li>Swift — currently learning</li>
-              <li>iOS app development fundamentals</li>
-              <li>Apple app-development tools</li>
-              <li>Android Studio</li>
-              <li>User-centered design</li>
-              <li>Prototyping</li>
-              <li>Usability testing</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">
-              Project Management and Collaboration
-            </h4>
-
-            <ul>
-              <li>Agile development</li>
-              <li>Kanban boards</li>
-              <li>Design thinking</li>
-              <li>Teamwork</li>
-              <li>Collaborative problem-solving</li>
-            </ul>
-          </div>
+        <div class="content-card">
+          <h4>Bachelor of Science in Computer Science</h4>
+          <p class="role">Software Engineering Concentration</p>
+          <p>University of Michigan–Flint, Flint, Michigan</p>
+          <p><b>Graduated:</b> 2019</p>
         </div>
 
       </div>
@@ -689,64 +554,44 @@
 
     <!-- Certifications and Professional Development -->
     <section id="certifications" class="section scrollspy">
-      <h3 class="page-title white-text teal">
-        Certifications and Professional Development
-      </h3>
+      <h3 class="page-title white-text teal">Certifications & Professional Development</h3>
 
       <div class="container">
 
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title teal-text">
-              Pega Certified System Architect
-            </span>
-
-            <p><b>Platform:</b> Version 8</p>
-            <p><b>Date:</b> March 2020</p>
-          </div>
+        <div class="content-card">
+          <h4>Pega Certified System Architect</h4>
+          <p>Platform Version 8</p>
+          <p><b>March 2020</b></p>
         </div>
 
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title teal-text">
-              Apple Foundation Program
-            </span>
-
-            <p><b>Provider:</b> Ed Farm</p>
-            <p><b>Start Date:</b> August 24, 2026</p>
-            <p><b>Status:</b> In progress</p>
-
-            <p>
-              Eight-week, 80-hour program covering iOS app development
-              fundamentals, design thinking, digital literacy, and
-              challenge-based collaborative learning.
-            </p>
-
-            <p>
-              <a href="https://www.edfarm.org/programs/workforce"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="teal-text">
-                Apple Foundation Program Website
-              </a>
-            </p>
-          </div>
+        <div class="content-card">
+          <h4>Apple Foundation Program, powered by Ed Farm</h4>
+          <p><b>Status:</b> In progress</p>
+          <p><b>Start Date:</b> August 24, 2026</p>
+          <p>
+            An eight-week, 80-hour program covering iOS app development
+            fundamentals, design thinking, digital literacy, and
+            challenge-based collaborative learning.
+          </p>
+          <p>
+            <b>Program website:</b>
+            <a href="https://www.edfarm.org/programs/workforce"
+               target="_blank" rel="noopener noreferrer">
+              Ed Farm Workforce Programs
+            </a>
+          </p>
         </div>
 
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title teal-text">InternMe in 3</span>
-            <p>University of Michigan–Flint | 2018</p>
-          </div>
+        <div class="content-card">
+          <h4>InternMe in 3</h4>
+          <p>University of Michigan–Flint</p>
+          <p><b>2018</b></p>
         </div>
 
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title teal-text">
-              Corporate Case Competition
-            </span>
-            <p>University of Michigan–Flint | 2019</p>
-          </div>
+        <div class="content-card">
+          <h4>Corporate Case Competition</h4>
+          <p>University of Michigan–Flint</p>
+          <p><b>2019</b></p>
         </div>
 
       </div>
@@ -754,110 +599,77 @@
 
     <!-- Leadership -->
     <section id="leadership" class="section scrollspy">
-      <h3 class="page-title white-text teal">
-        Leadership and Memberships
-      </h3>
+      <h3 class="page-title white-text teal">Leadership & Memberships</h3>
 
       <div class="container">
-        <div class="card">
-          <div class="card-content">
-
-            <ul>
-              <li>Upsilon Pi Epsilon, Computer Science Honor Society</li>
-              <li>University of Michigan African Student Association</li>
-              <li>National Society of Blacks in Engineering</li>
-              <li>University of Michigan Block Club</li>
-              <li>Association for Computing Machinery (ACM)</li>
-              <li>National Society of Leadership &amp; Success</li>
-            </ul>
-
-          </div>
+        <div class="content-card">
+          <ul>
+            <li>Upsilon Pi Epsilon, Computer Science Honor Society</li>
+            <li>University of Michigan African Student Association</li>
+            <li>National Society of Blacks in Engineering</li>
+            <li>University of Michigan Block Club</li>
+            <li>Association for Computing Machinery (ACM)</li>
+            <li>National Society of Leadership & Success</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section scrollspy full-height">
+    <section id="contact" class="section scrollspy">
       <h3 class="page-title white-text teal">Contact</h3>
 
       <div class="container">
+        <div class="content-card">
 
-        <p>
-          <a aria-label="Email Moesha"
-            href="mailto:MoeshaWoods13@gmail.com"
-            class="btn-floating btn-large waves-effect waves-light blue-grey">
-            <i class="fa fa-envelope"></i>
-          </a>
+          <p>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <b>Email:</b>
+            <a class="contact-link" href="mailto:Moeshawoods13@gmail.com">
+              Moeshawoods13@gmail.com
+            </a>
+          </p>
 
-          <a href="mailto:MoeshaWoods13@gmail.com" class="hoverline">
-            MoeshaWoods13@gmail.com
-          </a>
-        </p>
+          <p>
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <b>GitHub:</b>
+            <a class="contact-link" href="https://github.com/moeshaw"
+               target="_blank" rel="noopener noreferrer">
+              github.com/moeshaw
+            </a>
+          </p>
 
-        <p>
-          <a aria-label="View Moesha on GitHub"
-            href="https://github.com/moeshaw"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-floating btn-large waves-effect waves-light blue-grey">
-            <i class="fa fa-github"></i>
-          </a>
+          <p>
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <b>LinkedIn:</b>
+            <a class="contact-link"
+               href="https://www.linkedin.com/in/moesha-w-8143aa83"
+               target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/moesha-w-8143aa83
+            </a>
+          </p>
 
-          <a href="https://github.com/moeshaw"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hoverline">
-            github.com/moeshaw
-          </a>
-        </p>
+          <p>
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+            <b>Resume:</b>
+            <a class="resume-link"
+               href="assets/resume/Moesha%20Woods%20final%20resume%20(1)%20(1).pdf"
+               target="_blank" rel="noopener noreferrer">
+              View My Resume PDF
+            </a>
+          </p>
 
-        <p>
-          <a aria-label="View Moesha on LinkedIn"
-            href="https://www.linkedin.com/in/moesha-w-8143aa83"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-floating btn-large waves-effect waves-light blue-grey">
-            <i class="fa fa-linkedin"></i>
-          </a>
-
-          <a href="https://www.linkedin.com/in/moesha-w-8143aa83"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hoverline">
-            linkedin.com/in/moesha-w-8143aa83
-          </a>
-        </p>
-
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Typed.js -->
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <footer>
+    <p>© <span id="year">2026</span> Moesha Woods. All rights reserved.</p>
+  </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      if (typeof Typed !== "undefined") {
-        new Typed(".typing", {
-          strings: [
-            "Machine Learning",
-            "Data Science",
-            "Data Analysis",
-            "Software Engineering"
-          ],
-          loop: true,
-          typeSpeed: 80,
-          backSpeed: 40
-        });
-      }
-    });
-  </script>
-
-  <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-  <!-- Materialize JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
 
   <script>
@@ -865,10 +677,12 @@
       $(".scrollspy").scrollSpy();
 
       $(".button-collapse").sideNav({
-        menuWidth: 190,
+        menuWidth: 250,
         edge: "left",
         closeOnClick: true
       });
+
+      $("#year").text(new Date().getFullYear());
     });
   </script>
 
